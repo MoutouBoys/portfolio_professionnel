@@ -1,390 +1,333 @@
 :root {
-
     --bg-color: #0d131f;
-
     --text-primary: #ffffff;
-
     --text-secondary: #b0b3b8;
-
     --accent-color: #00e0ff;
-
     --nav-bg: rgba(255, 255, 255, 0.05);
 --card-bg: #1e2736; /* Couleur de fond des cartes selon images */
     --accent-color: #00e0ff;
 }
 
-
-
 * {
-
     margin: 0;
-
     padding: 0;
-
     box-sizing: border-box;
-
 }
-
-
 
 body {
-
     font-family: 'Inter', sans-serif;
-
     background-color: var(--bg-color);
-
     color: var(--text-primary);
-
     min-height: 100vh;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
-    overflow: hidden;
-
+    /* On retire overflow: hidden pour permettre le scroll sur mobile */
+    overflow-x: hidden; 
 }
-
-
 
 .main-container {
-
     position: relative;
-
     width: 100%;
-
-    height: 100vh;
-
+    min-height: 100vh; /* Utilisation de min-height au lieu de height */
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
+    padding: 20px;
 }
-
-
-
 /* --- LOGIQUE DE SWITCH --- */
-
 .hero-container {
-
     display: none; /* Caché par défaut */
-
     max-width: 1200px;
-
     width: 90%;
-
     align-items: center;
-
     justify-content: space-between;
-
     animation: fadeIn 0.6s ease;
-
 }
-
-
 
 .hero-container.active {
-
     display: flex; /* Affiché si actif */
-
 }
 
+/* Effet de lueur pulsante pour le mode actif */
+.hero-container.active .image-wrapper {
+    animation: pulseGlow 3s infinite alternate;
+}
 
+@keyframes pulseGlow {
+    from { box-shadow: 0 0 30px 2px rgba(0, 224, 255, 0.2); }
+    to { box-shadow: 0 0 60px 10px rgba(0, 224, 255, 0.5); }
+}
 
 @keyframes fadeIn {
-
     from { opacity: 0; transform: translateY(10px); }
-
     to { opacity: 1; transform: translateY(0); }
-
 }
-
-
 
 /* --- LAYOUT INVERSÉ (PROFIL) --- */
-
 .profile-layout {
-
     flex-direction: row; /* Image à gauche, Texte à droite */
-
     gap: 100px;
-
 }
-
-
 
 .profile-layout .hero-content {
-
     padding-right: 0;
-
     text-align: left;
-
 }
-
-
 
 /* --- TEXT CONTENT --- */
-
 .hero-content {
-
     flex: 1;
-
     max-width: 600px;
-
     padding-right: 50px;
-
 }
-
-
 
 .greeting { font-size: 1.5rem; font-weight: 700; }
 
-.name { font-size: 4rem; font-weight: 800; color: var(--accent-color); margin: 5px 0; }
+.name { 
+    font-size: clamp(2.5rem, 8vw, 4rem); 
+    font-weight: 800; 
+    line-height: 1.1;
+    margin: 10px 0;
+}
+
+.job-title { 
+    font-size: clamp(1.2rem, 4vw, 2rem); 
+    font-weight: 700; 
+    margin-bottom: 20px; 
+}
 
 .profile-layout .name { color: white; } /* "About Me" est en blanc sur l'image */
 
-.job-title { font-size: 2rem; font-weight: 700; margin-bottom: 20px; }
+.highlight { color: var(--accent-color) }
 
-.highlight { color: var(--accent-color); }
+.overlay-content .highlight-portfolio{
+font-size: 15px;
+margin-bottom: 5px;
+}
 
 .description { color: var(--text-secondary); line-height: 1.8; font-size: 1rem; margin-bottom: 30px; }
 
-
-
 /* --- IMAGE SECTION --- */
-
 .hero-image { flex: 1; display: flex; justify-content: center; }
 
 .image-wrapper {
-
     width: 420px;
-
     height: 420px;
-
     border-radius: 50%;
-
     position: relative;
-
     box-shadow: 0 0 50px 5px rgba(0, 224, 255, 0.3);
-
     border: 3px solid var(--accent-color);
-
     overflow: hidden;
-
+    transition: transform 0.3s ease;
 }
 
-.image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(20%); /* Touche pro */
+    transition: 0.3s;
+}
 
+.image-wrapper:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+/* --- TOOLTIP POUR LA NAVIGATION FLOTTANTE --- */
+.nav-item-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-
-/* --- TOOLTIPS (BULLES BLEUES) --- */
-
-.nav-item-wrapper, .social-icon-wrapper { position: relative; display: flex; justify-content: center; }
-
-
-
-.nav-tooltip, .tooltip-social {
-
+.nav-tooltip {
     position: absolute;
-
-    top: -45px;
-
+    top: -50px; /* Position au-dessus de la nav */
     background-color: var(--accent-color);
-
     color: #000;
-
-    padding: 4px 12px;
-
-    border-radius: 5px;
-
-    font-size: 0.75rem;
-
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.7rem;
     font-weight: 800;
-
     white-space: nowrap;
-
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    box-shadow: 0 5px 15px rgba(0, 224, 255, 0.3);
 }
 
-
-
-.nav-tooltip::after, .tooltip-social::after {
-
+/* Flèche du tooltip */
+.nav-tooltip::after {
     content: '';
-
     position: absolute;
-
     bottom: -5px;
-
     left: 50%;
-
     transform: translateX(-50%);
-
     border-left: 6px solid transparent;
-
     border-right: 6px solid transparent;
-
     border-top: 6px solid var(--accent-color);
-
 }
 
+/* Affichage au survol de l'item nav */
+.nav-item-wrapper:hover .nav-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
 
+/* On s'assure que la nav flottante ne coupe pas les tooltips */
+.floating-nav {
+    overflow: visible !important; 
+    z-index: 1000;
+}
+/* --- AMÉLIORATION SOCIAL LINKS --- */
 
+/* Conteneur parent */
+.social-icon-wrapper {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+}
+
+/* Tooltip caché par défaut */
+.tooltip-social {
+    position: absolute;
+    top: -35px; /* Ajusté pour être au-dessus */
+    background-color: var(--accent-color);
+    color: #000;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    pointer-events: none;
+    box-shadow: 0 5px 15px rgba(0, 224, 255, 0.3);
+    z-index: 10;
+}
+
+/* Flèche du tooltip */
+.tooltip-social::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid var(--accent-color);
+}
+
+/* LA CLASSE MAGIQUE (activée par JS) */
+.social-icon-wrapper.show-tooltip .tooltip-social {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* 3. Effet de Survole (Hover) sur l'icône */
+.social-icon:hover {
+    background-color: var(--accent-color);
+    color: #000; /* L'icône devient noire sur fond bleu */
+    box-shadow: 0 0 15px var(--accent-color);
+}
+
+/* On s'assure que l'icône "active" garde son style si besoin */
+.social-icon.active {
+    background-color: var(--accent-color);
+    color: #000;
+}
 /* --- BUTTONS & SOCIAL --- */
-
 .cta-group { display: flex; align-items: center; gap: 20px; }
 
 .btn-primary {
-
     background-color: var(--accent-color);
-
     color: #000;
-
     text-decoration: none;
-
     padding: 12px 30px;
-
     border-radius: 50px;
-
     font-weight: 700;
-
     box-shadow: 0 0 15px rgba(0, 224, 255, 0.4);
-
     transition: 0.3s;
-
 }
-
-
 
 .social-links { display: flex; gap: 15px; align-items: center; }
 
 .social-icon {
-
     width: 40px; height: 40px;
-
     border: 2px solid var(--accent-color);
-
     border-radius: 50%;
-
     display: flex; justify-content: center; align-items: center;
-
     color: var(--accent-color);
-
     text-decoration: none;
-
     transition: 0.3s;
-
 }
 
 .social-icon.active { background-color: var(--accent-color); color: #000; }
 
-
-
 /* --- NAVIGATION --- */
-
 .floating-nav {
-
     position: absolute;
-
-    bottom: 40px;
-
+    bottom: 20px;
     left: 50%;
-
     transform: translateX(-50%);
-
     background-color: rgba(255, 255, 255, 0.08);
-
     backdrop-filter: blur(15px);
-
     padding: 12px 30px;
-
     border-radius: 20px;
-
     display: flex;
-
     gap: 30px;
-
     border: 1px solid rgba(255, 255, 255, 0.1);
-
 }
-
-
 
 .nav-item { color: white; font-size: 1.2rem; text-decoration: none; transition: 0.3s; cursor: pointer;}
 
 .nav-item:hover, .nav-item.active { color: var(--accent-color); }
 
-
 /* --- SECTION RESUME CONTENUS --- */
 /* Navigation Onglets */
-
-.resume-nav {
-
-    display: flex;
-
-    justify-content: space-around;
-
-    width: 100%;
-
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-
-    margin-bottom: 40px;
-
+.section-title{
+    margin-bottom: 50px;
 }
-
-
+.resume-nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 40px;
+}
 
 .resume-nav-item {
-
     text-decoration: none;
-
     color: var(--text-secondary);
-
     font-weight: 700;
-
     font-size: 1.2rem;
-
     padding-bottom: 15px;
-
     position: relative;
-
     transition: 0.3s;
-
 }
-
-
 
 .resume-nav-item.active {
-
     color: var(--accent-color);
-
 }
-
-
 
 .resume-nav-item.active::after {
-
     content: '';
-
     position: absolute;
-
     bottom: -2px;
-
     left: 0;
-
     width: 100%;
-
     height: 2px;
-
     background-color: var(--accent-color);
-
     box-shadow: 0 0 10px var(--accent-color);
-
 }
-
 
 .resume-layout {
     flex-direction: column;
@@ -393,8 +336,43 @@ body {
     height: auto;
     max-height: 85vh;
     overflow-y: auto;
+    padding-right: 10px; /* Espace entre le contenu et la barre */
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
+/* --- PERSONNALISATION DE LA SCROLLBAR --- */
+
+/* Pour Chrome, Edge, Safari */
+/* 1. Largeur de la barre */
+.resume-layout::-webkit-scrollbar {
+    width: 6px; /* Très fin pour rester élégant */
+}
+
+/* 2. Le fond (rail) */
+.resume-layout::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.03); /* Presque invisible */
+    border-radius: 10px;
+}
+
+/* 3. La partie mobile (curseur) */
+.resume-layout::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 10px;
+    /* Effet de lueur subtile */
+    box-shadow: 0 0 5px var(--accent-color);
+}
+
+/* 4. Effet au survol */
+.resume-layout::-webkit-scrollbar-thumb:hover {
+    background: #00b8d4; /* Une nuance un peu plus sombre */
+}
+
+/* --- SUPPORT FIREFOX --- */
+.resume-layout {
+    scrollbar-width: thin; /* Barre fine */
+    scrollbar-color: var(--accent-color) rgba(255, 255, 255, 0.05); /* Curseur + Rail */
+}
 /* Grille des Skills (Image I3) */
 .skills-grid {
     display: grid;
@@ -509,7 +487,9 @@ body {
 }
 
 /* --- SECTION PORTFOLIO SPECIFIQUE --- */
-
+.section-title{
+    margin-bottom: 50px;
+}
 /* Grille de projets (My Work) */
 .portfolio-grid {
     display: grid;
@@ -558,7 +538,7 @@ body {
     display: flex; align-items: center; justify-content: center;
     color: #000; text-decoration: none; transition: 0.3s;
 }
-.circle-btn:hover { background: #000; color: #fff; }
+.circle-btn:hover { background: var(--accent-color); color: #fff; }
 
 /* Grille de Services (My Service) */
 .services-grid {
@@ -663,5 +643,80 @@ body {
 @media (max-width: 600px) {
     .input-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* --- RESPONSIVE LOGIC --- */
+
+@media (max-width: 1024px) {
+    .hero-container {
+        gap: 40px;
+    }
+    
+    .profile-layout {
+        gap: 50px;
+    }
+
+    .image-wrapper {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 850px) {
+     .hero-container, .profile-layout {
+        flex-direction: column-reverse; /* Image en haut, texte en bas */
+        justify-content: center;
+        text-align: center;
+        padding-top: 60px; /* Espace pour ne pas coller au haut */
+        padding-bottom: 100px; /* Espace pour la nav flottante */
+    }
+
+    .resume-layout{
+        flex-direction: column; /* Image en haut, texte en bas */
+
+    }
+    
+    .profile-layout {
+        flex-direction: column; /* Pour About Me, image en haut aussi */
+    }
+
+    .hero-content {
+        padding-right: 0;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-image {
+        margin-bottom: 30px;
+    }
+
+    .image-wrapper {
+        width: 280px;
+        height: 280px;
+    }
+
+    .cta-group {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-wrapper {
+        width: 220px;
+        height: 220px;
+    }
+
+    /* .floating-nav {
+        width: 90%;
+        gap: 15px;
+        padding: 10px 15px;
+    } */
+    
+    .description {
+        font-size: 0.9rem;
     }
 }

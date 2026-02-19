@@ -1,77 +1,69 @@
 <!DOCTYPE html>
-
 <html lang="fr">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Portfolio Shane Theodor</title>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <link rel="stylesheet" href="asset/css/index.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
-
 </head>
-
 <body>
-
-
-
    <main class="main-container">
     <section id="home" class="hero-container active">
-        <div class="hero-content">
-            <h2 class="greeting">Hello I'm</h2>
-            <h1 class="name">Shane Theodor</h1>
-            <h3 class="job-title">Frontend Developer</h3>
-            <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque maiores rem officiis praesentium. Facere, quis asperiores facilis quisquam nesciunt quo accusamus repellat nihil corrupti voluptatibus.
-            </p>
-            <div class="cta-group">
-                <a href="#" class="btn-primary">Download CV</a>
-                <div class="social-links">
+    <div class="hero-content">
+        <h2 class="greeting">Hello, It's Me</h2>
+        <h1 class="name">Shane <span class="highlight">Theodor</span></h1>
+        <h3 class="job-title">And I'm a <span class="highlight">Frontend Developer</span></h3>
+        <p class="description">
+            I break down complex user interface problems to create integrity-focussed solutions with a focus on usability and modern aesthetics.
+        </p>
+        <div class="cta-group">
+            <a href="#" class="btn-primary">Download CV</a>
+            <div class="social-links">
+                <div class="social-icon-wrapper">
+                    <span class="tooltip-social">Github</span>
                     <a href="#" class="social-icon"><i class="fa-brands fa-github"></i></a>
+                </div>
+
+                <div class="social-icon-wrapper">
+                    <span class="tooltip-social">LinkedIn</span>
                     <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
-                    <div class="social-icon-wrapper">
-                        <span class="tooltip-social">Youtube</span>
-                        <a href="#" class="social-icon active"><i class="fa-brands fa-youtube"></i></a>
-                    </div>
+                </div>
+
+                <div class="social-icon-wrapper">
+                    <span class="tooltip-social">Youtube</span>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
         </div>
-        <div class="hero-image">
-            <div class="image-wrapper">
-                <img src="votre-image.jpg" alt="Shane Theodor">
-            </div>
+    </div>
+    <div class="hero-image">
+        <div class="image-wrapper home-glow">
+            <img src="votre-image.jpg" alt="Shane Theodor">
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="profile" class="hero-container profile-layout">
-        <div class="hero-image">
-            <div class="image-wrapper">
-                <img src="votre-image.jpg" alt="Shane Theodor">
-            </div>
+<section id="profile" class="hero-container profile-layout">
+    <div class="hero-image">
+        <div class="image-wrapper profile-glow">
+            <img src="votre-image.jpg" alt="Shane Theodor">
         </div>
-        <div class="hero-content">
-            <h1 class="name">About Me</h1>
-            <h3 class="job-title highlight">Frontend Developer!</h3>
-            <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non earum numquam, modi autem consectetur ipsam atque dolorum delectus, excepturi minima velit reprehenderit deleniti.
-            </p>
-            <div class="cta-group">
-                <a href="#" class="btn-primary">View More</a>
-            </div>
+    </div>
+    <div class="hero-content">
+        <h1 class="name">About <span class="highlight">Me</span></h1>
+        <h3 class="job-title">Frontend Developer!</h3>
+        <p class="description">
+            I am a passionate developer based in your city, specializing in building exceptional digital experiences. My goal is to always provide clean code and pixel-perfect design.
+        </p>
+        <div class="cta-group">
+            <a href="#" class="btn-primary" onclick="switchPage('resume')">Read More</a>
         </div>
-    </section>
-
+    </div>
+</section>
     <section id="resume" class="hero-container resume-layout">
     <h1 class="section-title">Resume</h1>
-    <br>
     <div class="resume-nav">
         <button class="resume-nav-item active" onclick="showTab(event, 'experience')">Experience</button>
         <button class="resume-nav-item" onclick="showTab(event, 'skills')">Skills</button>
@@ -116,7 +108,6 @@
                 <div class="card-company"><span class="dot"></span> Google</div>
                 <p class="card-text">Design and development of modern user interfaces using React and Tailwind CSS.</p>
             </div>
-
         </div>
     </div>
 
@@ -177,8 +168,9 @@
                                 <div class="overlay-content">
                                     <h4>Frontend Project</h4>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                    <h4 class="highlight">HTML5, Bootstrap, JavaScript</h4>
+                                    <h4 class="highlight-portfolio">HTML5, Bootstrap, JavaScript</h4>
                                     <div class="overlay-btns">
+                                        <a href="#" class="circle-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                                         <a href="#" class="circle-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                                     </div>
                                 </div>
@@ -216,70 +208,84 @@
         </section>
 
         <section id="contact" class="hero-container resume-layout">
-    <h1 class="section-title">Contact</h1>
-    <br><br>
-    <h3 class="job-title highlight" style="text-align: center; margin-top: -20px;">Let's Work Together!</h3>
+        <h1 class="section-title">Contact</h1>
+        <h3 class="job-title highlight" style="text-align: center; margin-top: -20px;">Let's Work Together!</h3>
 
-    <div class="contact-container">
-        <form action="#" class="contact-form">
-            <div class="input-grid">
-                <div class="input-box">
-                    <input type="text" placeholder="Full Name" required>
+        <div class="contact-container">
+            <form action="#" class="contact-form">
+                <div class="input-grid">
+                    <div class="input-box">
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="number" placeholder="Phone Number">
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="Email Subject">
+                    </div>
                 </div>
-                <div class="input-box">
-                    <input type="email" placeholder="Email Address" required>
+                
+                <div class="textarea-box">
+                    <textarea cols="30" rows="10" placeholder="Your Message" required></textarea>
                 </div>
-                <div class="input-box">
-                    <input type="number" placeholder="Phone Number">
-                </div>
-                <div class="input-box">
-                    <input type="text" placeholder="Email Subject">
-                </div>
-            </div>
-            
-            <div class="textarea-box">
-                <textarea cols="30" rows="10" placeholder="Your Message" required></textarea>
-            </div>
 
-            <div class="contact-btn">
-                <button type="submit" class="btn-primary">Send Message</button>
-            </div>
-        </form>
-    </div>
-</section>
+                <div class="contact-btn">
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </section>
     <nav class="floating-nav">
-            <a href="#home" class="nav-item active" onclick="switchPage('home')"><i class="fa-solid fa-house"></i></a>
-            <a href="#profile" class="nav-item" onclick="switchPage('profile')"><i class="fa-solid fa-user"></i></a>
-            <a href="#resume" class="nav-item" onclick="switchPage('resume')"><i class="fa-solid fa-file-lines"></i></a>
-            <a href="#work" class="nav-item" onclick="switchPage('work')"><i class="fa-solid fa-briefcase"></i></a>
+        <div class="nav-item-wrapper">
+            <span class="nav-tooltip">Home</span>
+            <a href="#home" class="nav-item active" onclick="switchPage('home')">
+                <i class="fa-solid fa-house"></i>
+            </a>
+        </div>
+
+        <div class="nav-item-wrapper">
+            <span class="nav-tooltip">About</span>
+            <a href="#profile" class="nav-item" onclick="switchPage('profile')">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </div>
+
+        <div class="nav-item-wrapper">
+            <span class="nav-tooltip">Resume</span>
+            <a href="#resume" class="nav-item" onclick="switchPage('resume')">
+                <i class="fa-solid fa-file-lines"></i>
+            </a>
+        </div>
+
+        <div class="nav-item-wrapper">
+            <span class="nav-tooltip">Portfolio</span>
+            <a href="#work" class="nav-item" onclick="switchPage('work')">
+                <i class="fa-solid fa-briefcase"></i>
+            </a>
+        </div>
+
+        <div class="nav-item-wrapper">
+            <span class="nav-tooltip">Contact</span>
             <a href="#contact" class="nav-item" onclick="switchPage('contact')">
-    <i class="fa-solid fa-envelope"></i>
-</a>
-        </nav>
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+    </nav>
 </main>
-
-
-
     <script>
-
         function switchPage(pageId) {
-
             // Retirer la classe active de toutes les sections
-
             document.querySelectorAll('.hero-container').forEach(sec => sec.classList.remove('active'));
-
             // Ajouter active à la section cliquée
-
             document.getElementById(pageId).classList.add('active');
-
-           
-
             // Gestion de l'état actif de la nav
-
             document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
-
             event.currentTarget.classList.add('active');
-
+            // Optionnel : masquer tous les tooltips sociaux si on change de page principale
+    document.querySelectorAll('.social-icon-wrapper').forEach(w => w.classList.remove('show-tooltip'));
         }
         function showTab(event, tabId) {
     // 1. Désactiver tous les contenus d'onglets
@@ -326,8 +332,31 @@ function switchPage(pageId) {
             document.getElementById(tabId).classList.add('active');
             event.currentTarget.classList.add('active');
         }
+
+        // Gestion des tooltips sociaux au clic
+        document.querySelectorAll('.social-icon').forEach(icon => {
+            icon.addEventListener('click', function(e) {
+                e.preventDefault(); // Empêche la navigation si le href est "#"
+                e.stopPropagation(); // Empêche la propagation au document
+                
+                const wrapper = this.parentElement;
+                
+                // Ferme les autres tooltips ouverts
+                document.querySelectorAll('.social-icon-wrapper').forEach(w => {
+                    if (w !== wrapper) w.classList.remove('show-tooltip');
+                });
+
+                // Alterne (toggle) le tooltip actuel
+                wrapper.classList.toggle('show-tooltip');
+            });
+        });
+
+        // Fermer le tooltip si on clique n'importe où ailleurs sur la page
+        document.addEventListener('click', () => {
+            document.querySelectorAll('.social-icon-wrapper').forEach(w => {
+                w.classList.remove('show-tooltip');
+            });
+        });
     </script>
-
 </body>
-
 </html>
