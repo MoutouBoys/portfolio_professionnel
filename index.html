@@ -3,188 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Shane Theodor</title>
+    <title>Portfolio - Abdoulaye Yalcouye</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="asset/css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-   <main class="main-container">
-    <section id="home" class="hero-container active">
-    <div class="hero-content">
-        <h2 class="greeting">Hello, It's Me</h2>
-        <h1 class="name">Shane <span class="highlight">Theodor</span></h1>
-        <h3 class="job-title">And I'm a <span class="highlight">Frontend Developer</span></h3>
-        <p class="description">
-            I break down complex user interface problems to create integrity-focussed solutions with a focus on usability and modern aesthetics.
-        </p>
-        <div class="cta-group">
-            <a href="#" class="btn-primary">Download CV</a>
-            <div class="social-links">
-                <div class="social-icon-wrapper">
-                    <span class="tooltip-social">Github</span>
-                    <a href="#" class="social-icon"><i class="fa-brands fa-github"></i></a>
-                </div>
-
-                <div class="social-icon-wrapper">
-                    <span class="tooltip-social">LinkedIn</span>
-                    <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-
-                <div class="social-icon-wrapper">
-                    <span class="tooltip-social">Youtube</span>
-                    <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+    <main class="main-container">
+        <section id="home" class="hero-container active">
+            <div class="hero-content">
+                <h2 class="greeting">Bonjour, Je suis</h2>
+                <h1 class="name">Abdoulaye <span class="highlight">Yalcouye</span></h1>
+                <h3 class="job-title">Et je suis <span class="highlight">Analyste Programmeur</span></h3>
+                <p class="description">
+                    Développeur de logiciels expérimenté avec plus de 6 ans d'expérience. Je maîtrise plusieurs langages pour concevoir des solutions robustes et gérer efficacement des projets complexes.
+                </p>
+                <div class="cta-group">
+                    <a href="#" class="btn-primary">Télécharger CV</a>
+                    <div class="social-links">
+                        <div class="social-icon-wrapper">
+                            <span class="tooltip-social">LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/abdoulaye-yalcouye-643" target="_blank" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                        <div class="social-icon-wrapper">
+                            <span class="tooltip-social">Email</span>
+                            <a href="mailto:ayalcouye@edmsa.ml" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="hero-image">
-        <div class="image-wrapper home-glow">
-            <img src="votre-image.jpg" alt="Shane Theodor">
-        </div>
-    </div>
-</section>
+            <div class="hero-image">
+                <div class="image-wrapper home-glow">
+                    <img src="votre-image.jpg" alt="Abdoulaye Yalcouye">
+                </div>
+            </div>
+        </section>
 
-<section id="profile" class="hero-container profile-layout">
-    <div class="hero-image">
-        <div class="image-wrapper profile-glow">
-            <img src="votre-image.jpg" alt="Shane Theodor">
-        </div>
-    </div>
-    <div class="hero-content">
-        <h1 class="name">About <span class="highlight">Me</span></h1>
-        <h3 class="job-title">Frontend Developer!</h3>
-        <p class="description">
-            I am a passionate developer based in your city, specializing in building exceptional digital experiences. My goal is to always provide clean code and pixel-perfect design.
-        </p>
-        <div class="cta-group">
-            <a href="#" class="btn-primary" onclick="switchPage('resume')">Read More</a>
-        </div>
-    </div>
-</section>
-    <section id="resume" class="hero-container resume-layout">
-    <h1 class="section-title">Resume</h1>
-    <div class="resume-nav">
-        <button class="resume-nav-item active" onclick="showTab(event, 'experience')">Experience</button>
-        <button class="resume-nav-item" onclick="showTab(event, 'skills')">Skills</button>
-        <button class="resume-nav-item" onclick="showTab(event, 'education')">Education</button>
-    </div>
+        <section id="profile" class="hero-container profile-layout">
+            <div class="hero-image">
+                <div class="image-wrapper profile-glow">
+                    <img src="votre-image.jpg" alt="Abdoulaye Yalcouye">
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1 class="name">À propos de <span class="highlight">Moi</span></h1>
+                <h3 class="job-title">Profil Professionnel</h3>
+                <p class="description">
+                    Basé à Bamako, je possède une solide expérience dans l'analyse des besoins utilisateurs et la conception d'architectures logicielles. Mon parcours m'a permis d'intervenir sur une large gamme de projets technologiques innovants.
+                </p>
+                <div class="cta-group">
+                    <a href="#" class="btn-primary" onclick="switchPage('resume')">En savoir plus</a>
+                </div>
+            </div>
+        </section>
 
-    <div id="experience" class="tab-content active">
-        <div class="resume-grid">
-            <div class="resume-card">
-                <span class="card-date">2022 - Present</span>
-                <h4 class="card-title">Frontend Developer</h4>
-                <div class="card-company"><span class="dot"></span> Google</div>
-                <p class="card-text">Design and development of modern user interfaces using React and Tailwind CSS.</p>
+        <section id="resume" class="hero-container resume-layout">
+            <h1 class="section-title">Parcours</h1>
+            <div class="resume-nav">
+                <button class="resume-nav-item active" onclick="showTab(event, 'experience')">Expérience</button>
+                <button class="resume-nav-item" onclick="showTab(event, 'skills')">Compétences</button>
+                <button class="resume-nav-item" onclick="showTab(event, 'education')">Formation</button>
             </div>
-            <div class="resume-card">
-                <span class="card-date">2022 - Present</span>
-                <h4 class="card-title">Frontend Developer</h4>
-                <div class="card-company"><span class="dot"></span> Google</div>
-                <p class="card-text">Design and development of modern user interfaces using React and Tailwind CSS.</p>
-            </div>
-            <div class="resume-card">
-                <span class="card-date">2022 - Present</span>
-                <h4 class="card-title">Frontend Developer</h4>
-                <div class="card-company"><span class="dot"></span> Google</div>
-                <p class="card-text">Design and development of modern user interfaces using React and Tailwind CSS.</p>
-            </div>
-            <div class="resume-card">
-                <span class="card-date">2022 - Present</span>
-                <h4 class="card-title">Frontend Developer</h4>
-                <div class="card-company"><span class="dot"></span> Google</div>
-                <p class="card-text">Design and development of modern user interfaces using React and Tailwind CSS.</p>
-            </div>
-            <div class="resume-card">
-                <span class="card-date">2022 - Present</span>
-                <h4 class="card-title">Frontend Developer</h4>
-                <div class="card-company"><span class="dot"></span> Google</div>
-                <p class="card-text">Design and development of modern user interfaces using React and Tailwind CSS.</p>
-            </div>
-            <div class="resume-card">
-                <span class="card-date">2022 - Present</span>
-                <h4 class="card-title">Frontend Developer</h4>
-                <div class="card-company"><span class="dot"></span> Google</div>
-                <p class="card-text">Design and development of modern user interfaces using React and Tailwind CSS.</p>
-            </div>
-        </div>
-    </div>
 
-    <div id="skills" class="tab-content">
-        <div class="skills-grid">
-            <div class="skill-card"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
-            <div class="skill-card"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
-            <div class="skill-card"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
-            <div class="skill-card"><i class="fa-brands fa-react"></i><span>React.js</span></div>
-            <div class="skill-card"><i class="fa-solid fa-wind" style="color: #00e0ff;"></i><span>Tailwind.css</span></div>
-            <div class="skill-card"><i class="fa-brands fa-bootstrap"></i><span>Bootstrap</span></div>
-            <div class="skill-card"><i class="fa-brands fa-angular"></i><span>Angular</span></div>
-            <div class="skill-card"><i class="fa-brands fa-vuejs"></i><span>Vue.js</span></div>
-            <div class="skill-card"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
-            <div class="skill-card"><i class="fa-brands fa-java"></i><span>Java</span></div>
-            <div class="skill-card"><i class="fa-brands fa-php"></i><span>PHP</span></div>
-            <div class="skill-card"><i class="fa-brands fa-python"></i><span>Python</span></div>
-        </div>
-    </div>
+            <div id="experience" class="tab-content active">
+                <div class="resume-grid">
+                    <div class="resume-card">
+                        <span class="card-date">Décembre 2022 - Actuel</span>
+                        <h4 class="card-title">Analyste programmeur</h4>
+                        <div class="card-company"><span class="dot"></span> EDMsas, Bamako (CDI)</div>
+                        <p class="card-text">Développement Web (JS, HTML, CSS), applications mobiles (Ionic), mise en place d'APIs RESTful et optimisation des performances.</p>
+                    </div>
+                    <div class="resume-card">
+                        <span class="card-date">Septembre 2020 - Décembre 2022</span>
+                        <h4 class="card-title">Développeur full stack</h4>
+                        <div class="card-company"><span class="dot"></span> PROGRAMME TOUNKARANKE (CDI)</div>
+                        <p class="card-text">Conception d'apps mobiles (Flutter, Java, Kotlin, Swift) pour 3 banques et intégration d'APIs tierces (Banque, SOMAGEP, EDM).</p>
+                    </div>
+                    <div class="resume-card">
+                        <span class="card-date">Juillet 2019 - Mai 2020</span>
+                        <h4 class="card-title">Assistant ingénieur</h4>
+                        <div class="card-company"><span class="dot"></span> EDMsas (Stage)</div>
+                        <p class="card-text">Installation réseau, configuration de routeurs/commutateurs et résolution des problèmes de connectivité informatique.</p>
+                    </div>
+                </div>
+            </div>
 
-    <div id="education" class="tab-content">
-        <div class="resume-grid">
-            <div class="resume-card">
-                <span class="card-date">2017 - 2018</span>
-                <h4 class="card-title">Doctor of Engineering</h4>
-                <div class="card-company"><span class="dot"></span> Codehal University</div>
-                <p class="card-text">Specialized in advanced software architecture and distributed systems.</p>
+            <div id="skills" class="tab-content">
+                <div class="skills-grid">
+                    <div class="skill-card"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+                    <div class="skill-card"><i class="fa-brands fa-html5"></i><span>HTML5 / CSS3</span></div>
+                    <div class="skill-card"><i class="fa-solid fa-code"></i><span>Ionic / Flutter</span></div>
+                    <div class="skill-card"><i class="fa-brands fa-php"></i><span>PHP</span></div>
+                    <div class="skill-card"><i class="fa-brands fa-java"></i><span>Java / Kotlin</span></div>
+                    <div class="skill-card"><i class="fa-solid fa-database"></i><span>SQL & NoSQL</span></div>
+                    <div class="skill-card"><i class="fa-brands fa-linux"></i><span>Linux/Unix</span></div>
+                    <div class="skill-card"><i class="fa-solid fa-network-wired"></i><span>Réseaux (CCNA)</span></div>
+                    <div class="skill-card"><i class="fa-solid fa-microchip"></i><span>Veille Tech</span></div>
+                    <div class="skill-card"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+                    <div class="skill-card"><i class="fa-brands fa-react"></i><span>React.js</span></div>
+                    <div class="skill-card"><i class="fa-solid fa-wind" style="color: #00e0ff;"></i><span>Tailwind.css</span></div>
+                    <div class="skill-card"><i class="fa-brands fa-bootstrap"></i><span>Bootstrap</span></div>
+                    <div class="skill-card"><i class="fa-brands fa-angular"></i><span>Angular</span></div>
+                    <div class="skill-card"><i class="fa-brands fa-vuejs"></i><span>Vue.js</span></div>
+                    <div class="skill-card"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+                    <div class="skill-card"><i class="fa-brands fa-python"></i><span>Python</span></div>
+                </div>
             </div>
-            <div class="resume-card">
-                <span class="card-date">2015 - 2017</span>
-                <h4 class="card-title">Master of Computer Science</h4>
-                <div class="card-company"><span class="dot"></span> Codehal University</div>
-                <p class="card-text">Focus on full-stack development and cloud computing.</p>
-            </div>
-            <div class="resume-card">
-                <span class="card-date">2012 - 2015</span>
-                <h4 class="card-title">Bachelor of Data Science</h4>
-                <div class="card-company"><span class="dot"></span> Codehal University</div>
-                <p class="card-text">Introduction to algorithms, data structures, and statistical analysis.</p>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section id="work" class="hero-container resume-layout">
+            <div id="education" class="tab-content">
+                <div class="resume-grid">
+                    <div class="resume-card">
+                        <span class="card-date">2017 - 2019</span>
+                        <h4 class="card-title">Diplôme d'ingénieur</h4>
+                        <div class="card-company"><span class="dot"></span> INSIM, Béjaïa (Algérie)</div>
+                        <p class="card-text">Informatique option Système, réseaux et sécurités. Mention : Bien.</p>
+                    </div>
+                    <div class="resume-card">
+                        <span class="card-date">2014 - 2017</span>
+                        <h4 class="card-title">BTS Informatique</h4>
+                        <div class="card-company"><span class="dot"></span> INSFP, Sétif (Algérie)</div>
+                        <p class="card-text">Option Conception de Bases de données. Mention : Très Bien.</p>
+                    </div>
+                    <div class="resume-card">
+                        <span class="card-date">2013 - 2014</span>
+                        <h4 class="card-title">Baccalauréat</h4>
+                        <div class="card-company"><span class="dot"></span> Lycée Birgo, Bamako</div>
+                        <p class="card-text">Mention : Assez Bien.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="hero-container resume-layout">
             <h1 class="section-title">Portfolio</h1>
             <div class="resume-nav">
-                <button class="resume-nav-item active" onclick="showPortfolioTab(event, 'my-work')">My Work</button>
-                <button class="resume-nav-item" onclick="showPortfolioTab(event, 'my-service')">My Service</button>
+                <button class="resume-nav-item active" onclick="showPortfolioTab(event, 'my-work')">Mes Projets</button>
+                <button class="resume-nav-item" onclick="showPortfolioTab(event, 'my-service')">Services</button>
             </div>
 
             <div id="my-work" class="tab-content active">
                 <div class="portfolio-grid">
                     <div class="portfolio-card">
                         <div class="portfolio-img">
-                            <img src="project1.jpg" alt="Project 1">
+                            <img src="project1.jpg" alt="App Mobile">
                             <div class="portfolio-overlay">
                                 <div class="overlay-content">
-                                    <h4>Frontend Project</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                    <h4 class="highlight-portfolio">HTML5, Bootstrap, JavaScript</h4>
+                                    <h4>App Mobile Bancaire</h4>
+                                    <p>Développement Flutter pour le secteur bancaire malien.</p>
+                                    <h4 class="highlight-portfolio">Flutter, Dart, API REST</h4>
                                     <div class="overlay-btns">
-                                        <a href="#" class="circle-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                        <a href="#" class="circle-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-card">
-                        <div class="portfolio-img">
-                            <img src="project1.jpg" alt="Project 1">
-                            <div class="portfolio-overlay">
-                                <div class="overlay-content">
-                                    <h4>Frontend Project</h4>
-                                    <div class="overlay-btns">
-                                        <a href="#" class="circle-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                        <a href="#" class="circle-btn"><i class="fa-solid fa-link"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -197,130 +165,74 @@
                 <div class="services-grid">
                     <div class="service-card active">
                         <div class="service-header">
-                            <i class="fa-solid fa-palette"></i>
+                            <i class="fa-solid fa-code"></i>
                             <a href="#" class="service-link-icon active"><i class="fa-solid fa-arrow-right"></i></a>
                         </div>
-                        <h4 class="highlight">Graphic Design</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <h4 class="highlight">Développement Logiciel</h4>
+                        <p>Analyse, conception et implémentation de solutions sur mesure (Web & Mobile).</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="hero-container resume-layout">
-        <h1 class="section-title">Contact</h1>
-        <h3 class="job-title highlight" style="text-align: center; margin-top: -20px;">Let's Work Together!</h3>
-
-        <div class="contact-container">
-            <form action="#" class="contact-form">
-                <div class="input-grid">
-                    <div class="input-box">
-                        <input type="text" placeholder="Full Name" required>
+            <h1 class="section-title">Contact</h1>
+            <h3 class="job-title highlight" style="text-align: center; margin-top: -20px;">Collaborons ensemble !</h3>
+            <div class="contact-container">
+                <form action="#" class="contact-form">
+                    <div class="input-grid">
+                        <div class="input-box"><input type="text" placeholder="Nom complet" required></div>
+                        <div class="input-box"><input type="email" placeholder="Adresse Email" required></div>
+                        <div class="input-box"><input type="number" placeholder="Numéro de téléphone"></div>
+                        <div class="input-box"><input type="text" placeholder="Sujet"></div>
                     </div>
-                    <div class="input-box">
-                        <input type="email" placeholder="Email Address" required>
+                    <div class="textarea-box">
+                        <textarea cols="30" rows="10" placeholder="Votre Message" required></textarea>
                     </div>
-                    <div class="input-box">
-                        <input type="number" placeholder="Phone Number">
+                    <div class="contact-btn">
+                        <button type="submit" class="btn-primary">Envoyer</button>
                     </div>
-                    <div class="input-box">
-                        <input type="text" placeholder="Email Subject">
-                    </div>
-                </div>
-                
-                <div class="textarea-box">
-                    <textarea cols="30" rows="10" placeholder="Your Message" required></textarea>
-                </div>
+                </form>
+            </div>
+        </section>
 
-                <div class="contact-btn">
-                    <button type="submit" class="btn-primary">Send Message</button>
-                </div>
-            </form>
-        </div>
-    </section>
-    <nav class="floating-nav">
-        <div class="nav-item-wrapper">
-            <span class="nav-tooltip">Home</span>
-            <a href="#home" class="nav-item active" onclick="switchPage('home')">
-                <i class="fa-solid fa-house"></i>
-            </a>
-        </div>
+        <nav class="floating-nav">
+            <div class="nav-item-wrapper">
+                <span class="nav-tooltip">Accueil</span>
+                <a href="#home" class="nav-item active" onclick="switchPage('home')"><i class="fa-solid fa-house"></i></a>
+            </div>
+            <div class="nav-item-wrapper">
+                <span class="nav-tooltip">Moi</span>
+                <a href="#profile" class="nav-item" onclick="switchPage('profile')"><i class="fa-solid fa-user"></i></a>
+            </div>
+            <div class="nav-item-wrapper">
+                <span class="nav-tooltip">CV</span>
+                <a href="#resume" class="nav-item" onclick="switchPage('resume')"><i class="fa-solid fa-file-lines"></i></a>
+            </div>
+            <div class="nav-item-wrapper">
+                <span class="nav-tooltip">Projets</span>
+                <a href="#work" class="nav-item" onclick="switchPage('work')"><i class="fa-solid fa-briefcase"></i></a>
+            </div>
+            <div class="nav-item-wrapper">
+                <span class="nav-tooltip">Contact</span>
+                <a href="#contact" class="nav-item" onclick="switchPage('contact')"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </nav>
+    </main>
 
-        <div class="nav-item-wrapper">
-            <span class="nav-tooltip">About</span>
-            <a href="#profile" class="nav-item" onclick="switchPage('profile')">
-                <i class="fa-solid fa-user"></i>
-            </a>
-        </div>
-
-        <div class="nav-item-wrapper">
-            <span class="nav-tooltip">Resume</span>
-            <a href="#resume" class="nav-item" onclick="switchPage('resume')">
-                <i class="fa-solid fa-file-lines"></i>
-            </a>
-        </div>
-
-        <div class="nav-item-wrapper">
-            <span class="nav-tooltip">Portfolio</span>
-            <a href="#work" class="nav-item" onclick="switchPage('work')">
-                <i class="fa-solid fa-briefcase"></i>
-            </a>
-        </div>
-
-        <div class="nav-item-wrapper">
-            <span class="nav-tooltip">Contact</span>
-            <a href="#contact" class="nav-item" onclick="switchPage('contact')">
-                <i class="fa-solid fa-envelope"></i>
-            </a>
-        </div>
-    </nav>
-</main>
     <script>
         function switchPage(pageId) {
-            // Retirer la classe active de toutes les sections
-            document.querySelectorAll('.hero-container').forEach(sec => sec.classList.remove('active'));
-            // Ajouter active à la section cliquée
-            document.getElementById(pageId).classList.add('active');
-            // Gestion de l'état actif de la nav
-            document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
-            event.currentTarget.classList.add('active');
-            // Optionnel : masquer tous les tooltips sociaux si on change de page principale
-    document.querySelectorAll('.social-icon-wrapper').forEach(w => w.classList.remove('show-tooltip'));
-        }
-        function showTab(event, tabId) {
-    // 1. Désactiver tous les contenus d'onglets
-    const tabContents = document.querySelectorAll('.tab-content');
-    tabContents.forEach(content => {
-        content.classList.remove('active');
-    });
-
-    // 2. Retirer la classe 'active' de tous les boutons de navigation
-    const navItems = document.querySelectorAll('.resume-nav-item');
-    navItems.forEach(item => {
-        item.classList.remove('active');
-    });
-
-    // 3. Afficher le contenu de l'onglet sélectionné
-    document.getElementById(tabId).classList.add('active');
-
-    // 4. Ajouter la classe 'active' au bouton cliqué
-    event.currentTarget.classList.add('active');
-}
-
-// Fonction existante pour le switch de page principale
-function switchPage(pageId) {
             document.querySelectorAll('.hero-container').forEach(sec => sec.classList.remove('active'));
             document.getElementById(pageId).classList.add('active');
-            
             document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
-            event.currentTarget.classList.add('active');
+            if(event && event.currentTarget) event.currentTarget.classList.add('active');
+            document.querySelectorAll('.social-icon-wrapper').forEach(w => w.classList.remove('show-tooltip'));
         }
 
         function showTab(event, tabId) {
             const parent = event.currentTarget.closest('section');
             parent.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
             parent.querySelectorAll('.resume-nav-item').forEach(item => item.classList.remove('active'));
-            
             document.getElementById(tabId).classList.add('active');
             event.currentTarget.classList.add('active');
         }
@@ -328,34 +240,24 @@ function switchPage(pageId) {
         function showPortfolioTab(event, tabId) {
             document.querySelectorAll('#work .tab-content').forEach(content => content.classList.remove('active'));
             document.querySelectorAll('#work .resume-nav-item').forEach(item => item.classList.remove('active'));
-            
             document.getElementById(tabId).classList.add('active');
             event.currentTarget.classList.add('active');
         }
 
-        // Gestion des tooltips sociaux au clic
         document.querySelectorAll('.social-icon').forEach(icon => {
             icon.addEventListener('click', function(e) {
-                e.preventDefault(); // Empêche la navigation si le href est "#"
-                e.stopPropagation(); // Empêche la propagation au document
-                
+                if(this.getAttribute('href') === "#") e.preventDefault();
+                e.stopPropagation();
                 const wrapper = this.parentElement;
-                
-                // Ferme les autres tooltips ouverts
                 document.querySelectorAll('.social-icon-wrapper').forEach(w => {
                     if (w !== wrapper) w.classList.remove('show-tooltip');
                 });
-
-                // Alterne (toggle) le tooltip actuel
                 wrapper.classList.toggle('show-tooltip');
             });
         });
 
-        // Fermer le tooltip si on clique n'importe où ailleurs sur la page
         document.addEventListener('click', () => {
-            document.querySelectorAll('.social-icon-wrapper').forEach(w => {
-                w.classList.remove('show-tooltip');
-            });
+            document.querySelectorAll('.social-icon-wrapper').forEach(w => w.classList.remove('show-tooltip'));
         });
     </script>
 </body>
